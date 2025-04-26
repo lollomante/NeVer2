@@ -51,11 +51,11 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        # Create the main widget
+        # Create the main widget (the main layout)
         self.editor_widget = EditorWidget(self)
         self.setCentralWidget(self.editor_widget)
 
-        # Create the menu_bar
+        # Create the menu_bar (the topbat with the options)
         self.menu_bar = self.menuBar()
         self.create_menu()
 

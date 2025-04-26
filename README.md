@@ -81,6 +81,24 @@ After the installation, you can run __NeVer2__ from the root directory
 python NeVer2/never2.py
 ```
 
+### NOTE on running never:
+I had problem installing the libraries required by never2. in particular ```onnx``` (required by pyNeVer). 
+
+On python 3.13 when running ```pip install onnx``` it was failing.
+
+I manage to get it to install on python 3.12.6 but i still had problem when importing it into the files.
+
+at the end i found a fix [here](https://stackoverflow.com/questions/78996950/importerror-dll-load-failed-while-importing-onnx-cpp2py-export-a-dynamic-link)
+
+```
+pip install "python-doctr[torch,viz,html,contrib]"  
+pip install onnx==1.16.1
+``` 
+
+using python 3.12.6 and onnx 1.16.1 now seems to work.
+
+
+
 ## ARM-based Mac OS
 
 Since the Python packages needed are incompatible with "Python for ARM Platform" you can install 
